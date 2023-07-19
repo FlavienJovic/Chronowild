@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<Theme />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/themes/:id/topics" element={<Topic />} />
+        <Route path="/topics/:id/timelines" element={<Timeline />} />
       </Routes>
     </div>
   );

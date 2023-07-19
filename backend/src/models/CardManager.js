@@ -17,6 +17,13 @@ class CardManager extends AbstractManager {
       [card.title, card.id]
     );
   }
+
+  findAllCardsByTopic(id) {
+    return this.database.query(
+      `select * from  ${this.table} where id_topic = ?`,
+      [id]
+    );
+  }
 }
 
 module.exports = CardManager;
