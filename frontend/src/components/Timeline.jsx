@@ -94,7 +94,7 @@ export default function Timeline() {
     <>
       <h1>Ceci est un titre</h1>
 
-      <div style={{ width: "500px", height: "500px" }}>
+      <div style={{ width: "100%", height: "95vh" }}>
         {timelines.length > 0 && (
           <Chrono
             items={timelines}

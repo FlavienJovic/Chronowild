@@ -74,3 +74,19 @@ button {
     }
   }
 }
+
+.navbar {
+  display: flex;
+  background-color: brown;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    height: 17rem;
+  }
+  li {
+    color: white;
+  }
+}
