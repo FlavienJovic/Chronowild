@@ -34,6 +34,21 @@ const ItemManager = require("./ItemManager");
 models.item = new ItemManager();
 models.item.setDatabase(pool);
 
+const ThemeManager = require("./ThemeManager");
+
+models.theme = new ThemeManager();
+models.theme.setDatabase(pool);
+
+const TopicManager = require("./TopicManager");
+
+models.topic = new TopicManager();
+models.topic.setDatabase(pool);
+
+const CardManager = require("./CardManager");
+
+models.card = new CardManager();
+models.card.setDatabase(pool);
+
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 

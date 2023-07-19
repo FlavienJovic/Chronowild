@@ -54,3 +54,23 @@ code {
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  figure {
+    border-radius: 1rem;
+    border-color: #282c34;
+    margin: 0;
+    padding: 1rem;
+    img {
+      height: 3rem;
+    }
+    figcaption {
+      p {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}

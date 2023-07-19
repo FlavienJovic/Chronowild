@@ -27,7 +27,7 @@ create table card (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO theme (title, image) VALUES ('Hitoire','/assets/images/history.webp'), ('Cinema','/assets/images/cinema.png');
+INSERT INTO theme (title, image) VALUES ('Histoire','/assets/images/history.webp'), ('Cinema','/assets/images/cinema.png');
 
 INSERT INTO topic (title, image, id_theme) VALUES ('Seconde guerre mondiale','/assets/images/seconde_guerre_mondiale.jpg', 1), ('Alien','/assets/images/alien.jpg',2);
 

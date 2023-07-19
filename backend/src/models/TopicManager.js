@@ -17,6 +17,13 @@ class TopicManager extends AbstractManager {
       [topic.title, topic.id]
     );
   }
+
+  findAllByTheme(id) {
+    return this.database.query(
+      `select * from  ${this.table} where id_theme = ?`,
+      [id]
+    );
+  }
 }
 
 module.exports = TopicManager;

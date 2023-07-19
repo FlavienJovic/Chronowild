@@ -1,11 +1,18 @@
+import { Route, Routes } from "react-router-dom";
 import Timeline from "./components/Timeline";
+import Theme from "./components/Theme";
 
-import "./App.css";
+import "./App.scss";
+import Topic from "./components/Topic";
 
 function App() {
   return (
     <div className="App">
-      <Timeline />
+      <Routes>
+        <Route path="/" element={<Theme />} />
+        <Route path="/timeline" element={<Timeline />} />
+        <Route path="/themes/:id/topics" element={<Topic />} />
+      </Routes>
     </div>
   );
 }
