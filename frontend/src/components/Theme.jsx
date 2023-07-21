@@ -14,18 +14,24 @@ export default function Theme() {
   }, []);
 
   return (
-    <div className="gallery">
-      {themes.map((theme) => (
-        <Link to={`/themes/${theme.id}/topics`}>
-          <figure key={theme.id}>
-            <img
-              src={`${import.meta.env.VITE_BACKEND_URL}${theme.image}`}
-              alt="theme"
-            />
-            <figcaption>{theme.title && <p>{theme.title}</p>}</figcaption>
-          </figure>
-        </Link>
-      ))}
-    </div>
+    <>
+      <div className="intro">
+        <h1>Bienvenue sur ChronoWild</h1>
+        <p>Séléctionnez le theme de votre choix</p>
+      </div>
+      <div className="gallery">
+        {themes.map((theme) => (
+          <Link to={`/themes/${theme.id}/topics`}>
+            <figure key={theme.id}>
+              <img
+                src={`${import.meta.env.VITE_BACKEND_URL}${theme.image}`}
+                alt="theme"
+              />
+              <figcaption>{theme.title && <p>{theme.title}</p>}</figcaption>
+            </figure>
+          </Link>
+        ))}
+      </div>
+    </>
   );
 }

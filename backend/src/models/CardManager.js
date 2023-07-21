@@ -6,9 +6,19 @@ class CardManager extends AbstractManager {
   }
 
   insert(card) {
-    return this.database.query(`insert into ${this.table} (title) values (?)`, [
-      card.title,
-    ]);
+    return this.database.query(
+      `insert into ${this.table} (title, card_title,name,url, type,card_subtitle,card_detailed_text,id_topic ) values (?,?,?,?,?,?,?,?)`,
+      [
+        card.title,
+        card.card_title,
+        card.name,
+        card.url,
+        card.type,
+        card.card_subtitle,
+        card.card_detailed_text,
+        card.id_topic,
+      ]
+    );
   }
 
   update(card) {

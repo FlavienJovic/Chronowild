@@ -2,18 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const linkStyle = {
+    margin: "1rem",
+    textDecoration: "none",
+    color: "white",
+  };
   return (
     <div className="navbar">
       <Link to="/">
-        <img src="./src/assets/logo_chrono.png" alt="best logo ever" />
+        <img src="/src/assets/logo_chrono.png" alt="best logo ever" />
       </Link>
-      <nav>
-        <ul>
-          <Link to="/">
-            <li className="listPointer">Accueil</li>
-          </Link>
-        </ul>
-      </nav>
+      <Link to="/admin" style={linkStyle}>
+        Administration
+      </Link>
     </div>
   );
 }

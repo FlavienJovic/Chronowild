@@ -5,6 +5,7 @@ import Theme from "./components/Theme";
 import "./App.scss";
 import Topic from "./components/Topic";
 import Navbar from "./components/Navbar";
+import AdminPage from "./components/AdminPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           element={
             <>
               <Navbar />
+
               <Theme />
             </>
           }
@@ -24,6 +26,7 @@ function App() {
           element={
             <>
               <Navbar />
+
               <Timeline />
             </>
           }
@@ -43,6 +46,15 @@ function App() {
             <>
               <Navbar />
               <Timeline />
+            </>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <>
+              <Navbar />
+              <AdminPage />
             </>
           }
         />

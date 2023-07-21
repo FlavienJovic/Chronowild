@@ -43,68 +43,24 @@ export default function Timeline() {
       });
   }, []);
 
-  // const items = [
-  //   {
-  //     title: "25 July 1940",
-  //     cardTitle: "The Battle of Britain",
-  //     media: {
-  //       name: "Battle of britain",
-  //       source: {
-  //         url: "https://www.youtube.com/embed/gPMgYC0sXos",
-  //       },
-  //       type: "VIDEO",
-  //     },
-  //     cardSubtitle: `RAF Spitfire pilots scramble for their planes`,
-  //     cardDetailedText: `After France’s surrender in June 1940, Churchill told the British people, “Hitler knows that he will have to break us in this island or lose the war”. To mount a successful invasion, the Germans had to gain air superiority. The first phase of the battle began on 10 July with Luftwaffe attacks on shipping in the Channel.
-  //     The following month, RAF Fighter Command airfields and aircraft factories came under attack. Under the dynamic direction of Lord Beaverbrook, production of Spitfire and Hurricane fighters increased, and despite its losses in pilots and planes, the RAF was never as seriously weakened as the Germans supposed.`,
-  //   },
-  //   {
-  //     title: "25 July 1940",
-  //     cardTitle: "The Battle of Britain",
-  //     media: {
-  //       name: "Battle of britain",
-  //       source: {
-  //         url: "https://www.youtube.com/embed/gPMgYC0sXos",
-  //       },
-  //       type: "VIDEO",
-  //     },
-  //     cardSubtitle: `RAF Spitfire pilots scramble for their planes`,
-  //     cardDetailedText: `After France’s surrender in June 1940, Churchill told the British people, “Hitler knows that he will have to break us in this island or lose the war”. To mount a successful invasion, the Germans had to gain air superiority. The first phase of the battle began on 10 July with Luftwaffe attacks on shipping in the Channel.
-  //     The following month, RAF Fighter Command airfields and aircraft factories came under attack. Under the dynamic direction of Lord Beaverbrook, production of Spitfire and Hurricane fighters increased, and despite its losses in pilots and planes, the RAF was never as seriously weakened as the Germans supposed.`,
-  //   },
-  // ];
-
-  // const customContent = [
-  //   <div>
-  //     <img src={logo} className="App-logo" alt="logo" />
-  //     <h3>Custom Card 1</h3>
-  //     <p>This is the first custom card</p>
-  //   </div>,
-  //   <div>
-  //     <h3>Custom Card 2</h3>
-  //     <p>This is the second custom card</p>
-  //   </div>,
-  //   <div>
-  //     <h3>Custom Card 3</h3>
-  //     <p>This is the second custom card</p>
-  //   </div>,
-  // ];
-
   return (
-    <>
-      <h1>Ceci est un titre</h1>
-
-      <div style={{ width: "100%", height: "95vh" }}>
-        {timelines.length > 0 && (
-          <Chrono
-            items={timelines}
-            mode="VERTICAL_ALTERNATING"
-            cardHeight={250}
-            slideShow
-            enableOutline
-          />
-        )}
-      </div>
-    </>
+    <div style={{ width: "100%", height: "95vh" }}>
+      {timelines.length > 0 && (
+        <Chrono
+          items={timelines}
+          mode="VERTICAL_ALTERNATING"
+          cardHeight={250}
+          slideShow
+          enableOutline
+          theme={{
+            primary: "#596643",
+            secondary: "#596643",
+            titleColor: "black",
+            titleColorActive: "white",
+            cardTitleColor: "#596643",
+          }}
+        />
+      )}
+    </div>
   );
 }
